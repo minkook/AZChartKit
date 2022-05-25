@@ -45,10 +45,6 @@
                             <constraint firstItem="e7n-hb-c1S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="xz9-vm-p58"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="barChartView" destination="Z0B-fp-jM7" id="Q0G-VI-Yhh"/>
-                        <outlet property="doubleDonutChartView" destination="e7n-hb-c1S" id="lky-PS-cub"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

@@ -5,6 +5,16 @@
 [![License](https://img.shields.io/cocoapods/l/AZChartKit.svg?style=flat)](https://cocoapods.org/pods/AZChartKit)
 [![Platform](https://img.shields.io/cocoapods/p/AZChartKit.svg?style=flat)](https://cocoapods.org/pods/AZChartKit)
 
+
+<p align="center">
+      <img src="https://user-images.githubusercontent.com/2138712/170186228-e60f0ac5-abf8-4ece-ba12-abd11b19aa24.png" alt="DoubleDonut" title="DoubleDonut"> 
+</p>
+
+<p align="center">
+      <img src="https://user-images.githubusercontent.com/2138712/170186235-96d51d66-72f7-4391-8b82-92f564015205.png" alt="Bar" title="Bar"> 
+</p>
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

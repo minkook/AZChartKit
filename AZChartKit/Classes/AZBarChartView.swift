@@ -46,6 +46,9 @@ public class AZBarChartView: AZView {
     /// 값 (하이라이트) 색상
     @IBInspectable public var valueHighlightColor: UIColor = .blue
     
+    /// 애니메이션 시간
+    @IBInspectable public var animationDuration = 0.4
+    
     /// 이름 폰트
     public var nameFont: UIFont = UIFont.systemFont(ofSize: 12.0)
     
@@ -55,15 +58,12 @@ public class AZBarChartView: AZView {
     /// 값 (하이라이트) 폰트
     public var valueHighlightFont: UIFont = UIFont.boldSystemFont(ofSize: 15.0)
     
-    /// 애니메이션 시간
-    @IBInspectable public var animationDuration = 0.4
-    
     
     
     // MARK: - Data
     
     public var barValues: [Int] = [20, 52, 14, 9, 3, 0]
-    public var barNames: [String] = ["신입", "1년미만", "1~3년", "4~6년", "7~10년", "10년~"]
+    public var barNames: [String] = ["이름1", "이름2", "이름3", "이름4", "이름5", "이름6"]
     
     
     
