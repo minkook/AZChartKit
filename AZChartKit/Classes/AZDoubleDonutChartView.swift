@@ -9,30 +9,30 @@ import Foundation
 import UIKit
 
 @IBDesignable
-open class AZDoubleDonutChartView: AZView {
+public class AZDoubleDonutChartView: AZView {
     
     // MARK: - Design
     
     /// 도넛 크기
-    @IBInspectable open var donutWidth: CGFloat = 20.0
+    @IBInspectable public var donutWidth: CGFloat = 20.0
     
     /// 왼쪽과 오른쪽 사이 간격
-    @IBInspectable open var spacing: CGFloat = 2.0
+    @IBInspectable public var spacing: CGFloat = 2.0
     
     /// 왼쪽 색상
-    @IBInspectable open var leftColor: UIColor = .red
+    @IBInspectable public var leftColor: UIColor = .red
     
     /// 오른쪽 색상
-    @IBInspectable open var rightColor: UIColor = .blue
+    @IBInspectable public var rightColor: UIColor = .blue
     
     /// 애니메이션 시간
-    @IBInspectable open var animationDuration: CGFloat = 0.4
+    @IBInspectable public var animationDuration: CGFloat = 0.4
     
     
     // MARK: - Data
     
-    @IBInspectable open var leftValue: CGFloat = 62.0
-    @IBInspectable open var rightValue: CGFloat = 38.0
+    @IBInspectable public var leftValue: CGFloat = 62.0
+    @IBInspectable public var rightValue: CGFloat = 38.0
     
     
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-open class AZView: UIView {
+public class AZView: UIView {
     public var isLayoutLoaded: Bool { __isLayoutLoaded }
     public var setNeedsShowAction: (() -> Void)? = nil
     
