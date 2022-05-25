@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'AZChartKit_Example' do
+  pod 'AZChartKit', :path => '../'
+
+  target 'AZChartKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
