@@ -1,6 +1,6 @@
 # AZChartKit
 
-[![CI Status](https://img.shields.io/travis/mkyoo/AZChartKit.svg?style=flat)](https://travis-ci.org/mkyoo/AZChartKit)
+[![CI Status](https://img.shields.io/travis/minkook/AZChartKit.svg?style=flat)](https://travis-ci.org/minkook/AZChartKit)
 [![Version](https://img.shields.io/cocoapods/v/AZChartKit.svg?style=flat)](https://cocoapods.org/pods/AZChartKit)
 [![License](https://img.shields.io/cocoapods/l/AZChartKit.svg?style=flat)](https://cocoapods.org/pods/AZChartKit)
 [![Platform](https://img.shields.io/cocoapods/p/AZChartKit.svg?style=flat)](https://cocoapods.org/pods/AZChartKit)
@@ -22,7 +22,7 @@ pod 'AZChartKit'
 
 ## Author
 
-mkyoo, manguksmediawill@gmail.com
+minkook, manguks@gmail.com
 
 ## License
 

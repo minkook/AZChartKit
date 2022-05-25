@@ -2,23 +2,38 @@
 //  ViewController.swift
 //  AZChartKit
 //
-//  Created by mkyoo on 05/25/2022.
-//  Copyright (c) 2022 mkyoo. All rights reserved.
+//  Created by minkook on 05/25/2022.
+//  Copyright (c) 2022 minkook. All rights reserved.
 //
 
 import UIKit
+import AZChartKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var doubleDonutChartView: AZDoubleDonutChartView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        configDoubleDonutChartView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    // MARK: - DoubleDonut Chart
+    func configDoubleDonutChartView() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            self.doubleDonutChartView.leftValue = 22
+            self.doubleDonutChartView.rightValue = 78
+            self.doubleDonutChartView.show()
+        }
+    }
 }
 

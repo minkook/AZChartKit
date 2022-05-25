@@ -29,10 +29,10 @@
 
 /* Begin PBXFileReference section */
 		1605B7B1F25E832AF67A7631 /* Pods-AZChartKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZChartKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-AZChartKit_Tests/Pods-AZChartKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1DB5BAD45C8BC9B43D8A123B /* AZChartKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AZChartKit.podspec; path = ../AZChartKit.podspec; sourceTree = "<group>"; };
-		452E6B9371B2E9DEC7C02B9C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1DB5BAD45C8BC9B43D8A123B /* AZChartKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AZChartKit.podspec; path = ../AZChartKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		452E6B9371B2E9DEC7C02B9C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4D6423EFC749C1F35B1AAD42 /* Pods_AZChartKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AZChartKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		51C2E3647D0B0147F4A1D91F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		51C2E3647D0B0147F4A1D91F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AZChartKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AZChartKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 				E035FBAC8637FD075B91A0D2 /* Pods-AZChartKit_Tests.debug.xcconfig */,
 				1605B7B1F25E832AF67A7631 /* Pods-AZChartKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
