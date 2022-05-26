@@ -274,7 +274,7 @@ fileprivate extension AZBarChartView {
 }
 
 extension AZBarChartView: CAAnimationDelegate {
-    private func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if let index = anim.value(forKey: "INDEX:") as? Int, index < valueLabels.count {
             let label = valueLabels[index]
             UIView.animate(withDuration: 0.2) {

@@ -26,7 +26,17 @@ public class AZDoubleDonutChartView: AZView {
     @IBInspectable public var rightColor: UIColor = .blue
     
     /// 애니메이션 시간
-    @IBInspectable public var animationDuration: CGFloat = 0.4
+    @IBInspectable public var animationDuration: CGFloat = 4.4
+    
+    /// 값 표시 on/off
+    @IBInspectable public var isHiddenValueText: Bool = false
+    
+    /// 값 표시 글자크기
+    @IBInspectable public var valueTextSize: CGFloat = 18.0
+    
+    /// 값 표시 글자색상
+    @IBInspectable public var valueTextColor: UIColor = .black
+    
     
     
     // MARK: - Data
@@ -39,6 +49,9 @@ public class AZDoubleDonutChartView: AZView {
     // MARK: - Private
     private let leftLayer = CAShapeLayer()
     private let rightLayer = CAShapeLayer()
+    private let valueLabel = UILabel()
+    
+    private let autoCounting = AZAutoCounting()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,6 +71,9 @@ public class AZDoubleDonutChartView: AZView {
         rightLayer.fillColor = UIColor.clear.cgColor
         self.layer.addSublayer(rightLayer)
         
+        valueLabel.textAlignment = .center
+        self.addSubview(valueLabel)
+        
 #if !TARGET_INTERFACE_BUILDER
         setNeedsShowAction = { [weak self] in
             guard let self = self else { return }
@@ -67,6 +83,7 @@ public class AZDoubleDonutChartView: AZView {
         setNeedsShowAction = { [weak self] in
             guard let self = self else { return }
             self.show(false)
+            self.valueLabel.text = "\(Int(self.leftValue))/\(Int(self.rightValue))"
         }
 #endif
         
@@ -77,6 +94,7 @@ public class AZDoubleDonutChartView: AZView {
         
         adjustLeft()
         adjustRight()
+        adjustValueLabel()
         
         if animated && animationDuration > 0.0 {
             animate()
@@ -112,6 +130,13 @@ fileprivate extension AZDoubleDonutChartView {
         rightLayer.lineWidth = donutWidth
         rightLayer.strokeColor = rightColor.cgColor
         rightLayer.frame = bounds
+    }
+    
+    func adjustValueLabel() {
+        valueLabel.frame = bounds
+        valueLabel.isHidden = isHiddenValueText
+        valueLabel.font = UIFont.boldSystemFont(ofSize: valueTextSize)
+        valueLabel.textColor = valueTextColor
     }
 }
 
@@ -160,5 +185,11 @@ fileprivate extension AZDoubleDonutChartView {
         
         let rightAnimation = strokeEndAnimation()
         rightLayer.add(rightAnimation, forKey: nil)
+        
+        autoCounting.emulate(count: Int(leftValue), duration: animationDuration) { [weak self] countValue in
+            guard let self = self else { return }
+            let rightValue = self.rightValue * countValue / self.leftValue
+            self.valueLabel.text = "\(Int(countValue))/\(Int(rightValue))"
+        }
     }
 }
